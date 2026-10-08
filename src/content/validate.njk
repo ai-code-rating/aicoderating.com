@@ -1,0 +1,46 @@
+---
+layout: layouts/page.njk
+page_title: Validator
+page_description: Check that an ACR.md file follows the AI Code Rating spec.
+permalink: /validate/
+doc_class: wide
+date_updated: 2026-10-07
+sitemap:
+  changefreq: monthly
+scripts:
+  - /assets/js/vendor/js-yaml.min.js
+  - /assets/js/levels.js
+  - /assets/js/acr-check.js
+  - /assets/js/validator.js
+---
+<p class="prose">Paste your <code>{{ meta.file_name }}</code> to check it against <a href="{{ meta.url_spec }}">spec {{ meta.spec_version }}</a>. It's checked in your browser as you type, and nothing is sent anywhere. The box starts with an example. To run the same checks on every push and pull request, use the <a href="{{ meta.url_action }}">GitHub Action</a>.</p>
+
+<div class="validator">
+    <div class="v-input">
+        <div class="out-head"><label for="acr-input" class="label">{{ meta.file_name }}</label><button class="copy" type="button" id="acr-clear">Clear</button></div>
+        <textarea id="acr-input" spellcheck="false" autocomplete="off" rows="20">---
+rating: A2b
+spec: "{{ meta.spec_version }}"
+updated: {{ date_updated | isoDate }}
+---
+
+# AI Code Rating
+
+**ACR A2b** (Maintainer: Expert · AI Share: 26–50% · Oversight: Reviewed)
+
+This project is rated with [AI Code Rating]({{ meta.site_url }}/spec/{{ meta.spec_version }}/), spec version {{ meta.spec_version }}.
+
+## How AI Was Used
+
+We use AI to write tests and some features, alongside code we write
+ourselves. Every AI change goes through the same pull request review
+as code written by people.
+</textarea>
+    </div>
+    <div class="v-output">
+        <span class="label">Result</span>
+        <p id="acr-summary" class="v-summary is-empty" aria-live="polite">Checking...</p>
+        <ul id="acr-results" class="v-list"></ul>
+        <noscript><p class="muted">The validator needs JavaScript.</p></noscript>
+    </div>
+</div>

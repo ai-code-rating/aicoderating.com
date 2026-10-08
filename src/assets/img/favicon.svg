@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .p1 { fill: #2140B5; } .p2 { fill: #9A5300; } .p3 { fill: #0A7260; }
+    @media (prefers-color-scheme: dark) { .p1 { fill: #93A6FF; } .p2 { fill: #F0A54B; } .p3 { fill: #4FD0B4; } }
+  </style>
+  <rect class="p1" x="2" y="2" width="8" height="28"/>
+  <rect class="p2" x="12" y="2" width="8" height="28"/>
+  <rect class="p3" x="22" y="2" width="8" height="28"/>
+</svg>

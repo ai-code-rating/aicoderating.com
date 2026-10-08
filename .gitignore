@@ -1,0 +1,5 @@
+/.cache
+/_website
+/node_modules
+/scripts/.fonts
+/src/_includes/local/

@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/page.njk",
+  "sitemap": {
+    "changefreq": "monthly"
+  },
+  "templateEngineOverride": "njk,md"
+}

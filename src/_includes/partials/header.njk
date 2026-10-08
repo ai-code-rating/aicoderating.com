@@ -1,0 +1,19 @@
+{#- A data plate: each link is a cell with a small field name above it, like a spec sheet. -#}
+{%- macro cur(path) -%}{% if page.url.startsWith(path) %} aria-current="page"{% endif %}{%- endmacro -%}
+<header class="top">
+    <div class="top-strip">
+        <span>Draft Spec v{{ meta.spec_version }}</span>
+        <span><a href="{{ meta.url_spec_changelog }}"{{ cur(meta.url_spec_changelog) }}>Changelog</a><a href="{{ meta.url_related }}"{{ cur(meta.url_related) }}>Related Work</a><a href="{{ meta.url_repo }}">GitHub</a></span>
+    </div>
+    <div class="top-plate">
+        <div class="top-brand"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i></span>{{ meta.site_title }}</a></div>
+        <nav aria-label="Sections">
+            <a href="/#levels"><small>Scale</small>Levels</a>
+            <a href="/#rate"><small>Rating</small>Rate</a>
+            <a href="/#file"><small>File</small>{{ meta.file_name }}</a>
+            <a href="{{ meta.url_validator }}"{{ cur(meta.url_validator) }}><small>Tool</small>Validate</a>
+            <a href="{{ meta.url_spec }}"{% if page.url.startsWith(meta.url_spec) and not page.url.startsWith(meta.url_spec_changelog) %} aria-current="page"{% endif %}><small>Standard</small>Spec</a>
+            <a href="{{ meta.url_faq }}"{{ cur(meta.url_faq) }}><small>Help</small>FAQ</a>
+        </nav>
+    </div>
+</header>

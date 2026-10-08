@@ -1,0 +1,13 @@
+<footer>
+    <div class="footer-row">
+        <span>{{ meta.site_title }} · Draft Spec v{{ meta.spec_version }} · Proof of Concept</span>
+        <span>Ratings are self-reported by project maintainers. <a href="{{ meta.url_related }}">Related work</a> · <a href="{{ meta.url_issue_new }}">Feedback</a> · <a href="{{ meta.url_repo }}">Source on GitHub</a></span>
+    </div>
+    <div class="footer-row">
+        <span>{% if meta.analytics_note %}{{ meta.analytics_note }} {% endif %}Spec licensed under <a href="{{ meta.url_licence_spec }}">CC BY 4.0</a>. Site code under the <a href="{{ meta.url_licence_code }}">MIT licence</a>.</span>
+        <span class="footer-tools">
+            {% include "partials/acr-badge.njk" %}
+            <button class="theme-toggle" type="button" id="theme-toggle">Theme: Dark</button>
+        </span>
+    </div>
+</footer>

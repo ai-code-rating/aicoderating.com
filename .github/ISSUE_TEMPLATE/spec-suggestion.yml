@@ -1,0 +1,42 @@
+name: Spec suggestion
+description: Suggest a change to the rating or the ACR.md format, or point out something the spec doesn't cover.
+title: "Spec: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape AI Code Rating. The spec is a draft, so feedback now has the most influence on version 1.0.
+
+        The [contributing guide](https://github.com/ai-code-rating/aicoderating.com/blob/main/CONTRIBUTING.md) explains what makes a suggestion easy to act on. Please follow the [code of conduct](https://github.com/ai-code-rating/aicoderating.com/blob/main/CODE_OF_CONDUCT.md).
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What can't a project express today, or where does the current wording lead to the wrong rating?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: A real example
+      description: The kind of project, how it uses AI, the rating it gets now, and the rating you think it should get.
+      placeholder: |
+        A two-person team where every pull request is reviewed by an AI tool and one person...
+        Rating now: ACR B2c
+        Rating it should get: ...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Optional. Exact wording is welcome but not required.
+  - type: dropdown
+    id: version
+    attributes:
+      label: Spec version
+      options:
+        - "0.1"
+    validations:
+      required: true

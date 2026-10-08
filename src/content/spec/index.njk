@@ -1,0 +1,8 @@
+---
+page_title: Spec
+page_description: The ACR.md file format and the rules for choosing an AI Code Rating.
+permalink: /spec/
+templateEngineOverride: njk
+---
+{#- /spec/ always shows the current version (meta.spec_version). Versioned pages live in this folder. -#}
+{% for item in collections.spec %}{% if item.data.spec_version == meta.spec_version %}{{ item.templateContent | safe }}{% endif %}{% endfor %}

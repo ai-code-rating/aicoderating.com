@@ -1,0 +1,12 @@
+[
+  {
+    "version": "0.1",
+    "status": "Draft",
+    "date": "2026-10-05",
+    "changes": [
+      "First draft.",
+      "Three positions: Maintainer Expertise (A–E), AI Share (0–4) and Oversight (a–e).",
+      "The ACR.md file, with required rating, spec and updated fields, plus a short plain-English paragraph about how AI is used."
+    ]
+  }
+]

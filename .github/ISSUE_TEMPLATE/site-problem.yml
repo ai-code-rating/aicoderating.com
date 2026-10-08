@@ -1,0 +1,30 @@
+name: Site problem
+description: Something on aicoderating.com is broken, wrong or unclear, such as a page, the rating form or the validator.
+title: "Site: "
+labels: ["bug"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the page with the problem.
+      placeholder: https://aicoderating.com/validate/
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did and what went wrong. For unclear wording, quote the text.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      description: Optional, but helpful for layout or form problems.
+      placeholder: Firefox on Linux, Safari on iPhone

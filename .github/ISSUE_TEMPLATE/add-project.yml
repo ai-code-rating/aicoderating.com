@@ -1,0 +1,55 @@
+name: Add my project
+description: List a project that publishes a rating in ACR.md in Rated Projects on the home page.
+title: "Rated project: "
+labels: ["rated project"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for publishing a rating. Projects are listed in [Rated Projects](https://aicoderating.com/#rated) once their `ACR.md` passes the [validator](https://aicoderating.com/validate/). Don't have a rating yet? The [rating form](https://aicoderating.com/#rate) writes the file for you.
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Repository
+      description: The project's public repository.
+      placeholder: https://github.com/owner/project
+    validations:
+      required: true
+  - type: input
+    id: acr-file
+    attributes:
+      label: ACR.md link
+      description: The file in the repository's root.
+      placeholder: https://github.com/owner/project/blob/main/ACR.md
+    validations:
+      required: true
+  - type: input
+    id: rating
+    attributes:
+      label: Rating
+      placeholder: A2b
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: Short description
+      description: One sentence about what the project is, shown under its name.
+      placeholder: A command-line tool that checks broken links in Markdown files.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: The ACR.md file passes the validator.
+          required: true
+        - label: I maintain this project, or its maintainers agree to it being listed.
+          required: true

@@ -1,0 +1,30 @@
+name: Related Work correction
+description: We've described another AI disclosure standard inaccurately, or missed one.
+title: "Related Work: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The [Related Work](https://aicoderating.com/related-work/) page aims to describe other standards fairly and accurately.
+  - type: input
+    id: standard
+    attributes:
+      label: Standard
+      description: The name of the standard or project.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Its website or repository.
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What's wrong or missing
+      description: What the page says now and what it should say, or a short description of the standard we missed.
+    validations:
+      required: true

@@ -1,0 +1,7 @@
+---
+layout: layouts/base.njk
+---
+<article class="doc{% if doc_class %} {{ doc_class }}{% endif %}">
+    <h1>{{ page_title }}</h1>
+    {{ content | safe }}
+</article>

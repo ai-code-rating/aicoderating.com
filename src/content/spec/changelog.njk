@@ -1,0 +1,15 @@
+---
+page_title: Spec Changelog
+page_description: Every version of the AI Code Rating spec and what changed in it.
+permalink: /spec/changelog/
+templateEngineOverride: njk
+---
+<p>Each version of the spec keeps a permanent page. A rating should be read against the version named in its file's <code>spec</code> field. The latest version is always at <a href="{{ meta.url_spec }}">{{ meta.url_spec }}</a>.</p>
+
+{% for v in spec_versions | reverse %}
+<h2><a href="/spec/{{ v.version }}/">Version {{ v.version }}</a></h2>
+<p class="meta-line">{{ v.status }} · {{ v.date }}</p>
+<ul>
+    {% for c in v.changes %}<li>{{ c }}</li>{% endfor %}
+</ul>
+{% endfor %}

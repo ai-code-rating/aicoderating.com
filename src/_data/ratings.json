@@ -1,0 +1,30 @@
+[
+    {
+        "name": "aicoderating.com",
+        "url": "https://github.com/ai-code-rating/aicoderating.com",
+        "acr_url": "https://github.com/ai-code-rating/aicoderating.com/blob/main/ACR.md",
+        "self": true,
+        "desc": "This site. Claude Code writes nearly all of the code, directed by its author."
+    },
+    {
+        "name": "DomainMOD",
+        "url": "https://github.com/domainmod/domainmod",
+        "acr_url": "https://github.com/domainmod/domainmod/blob/master/ACR.md",
+        "rating": "B0a",
+        "desc": "An app for managing domains and SSL certificates, maintained by hand since 2010."
+    },
+    {
+        "name": "Email Health Check",
+        "url": "https://github.com/gregdotca/email-health-check",
+        "acr_url": "https://github.com/gregdotca/email-health-check/blob/main/ACR.md",
+        "rating": "B4c",
+        "desc": "A self-hosted checker that emails back a report on a domain's PTR, SPF, DKIM and DMARC setup."
+    },
+    {
+        "name": "HomelabAPI",
+        "url": "https://github.com/homelabapi/homelabapi",
+        "acr_url": "https://github.com/homelabapi/homelabapi/blob/main/ACR.md",
+        "rating": "B0a",
+        "desc": "A self-hosted API that gathers a homelab's notifications and other outputs in one place."
+    }
+]

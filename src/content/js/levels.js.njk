@@ -1,0 +1,14 @@
+---
+permalink: /assets/js/levels.js
+eleventyExcludeFromCollections: true
+templateEngineOverride: njk
+---
+// Generated from src/_data/levels.json, spec_versions.json and meta.js. Edit those, not this file.
+window.ACR = {
+    spec: {{ meta.spec_version | dump | safe }},
+    specVersions: [{% for v in spec_versions %}{{ v.version | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %}],
+    fileName: {{ meta.file_name | dump | safe }},
+    siteUrl: {{ meta.site_url | dump | safe }},
+    badgeColour: {{ meta.badge_colour | dump | safe }},
+    levels: {{ levels | dump | safe }}
+};

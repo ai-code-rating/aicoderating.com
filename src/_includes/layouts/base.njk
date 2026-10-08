@@ -1,0 +1,57 @@
+---
+---
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/assets/js/theme.js"></script>
+    {% if is_home_page %}
+      <title>{{ meta.site_title }}</title>
+    {% else %}
+      <title>{{ page_title }} - {{ meta.site_title }}</title>
+    {% endif %}
+    {% set description = page_description or meta.site_description %}
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <meta name="description" content="{{ description }}">
+    <link rel="canonical" href="{{ meta.site_url }}{{ page.url }}">
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <!-- Open Graph -->
+    <meta property="og:url" content="{{ meta.site_url }}{{ page.url }}">
+    <meta property="og:site_name" content="{{ meta.site_title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page_title or meta.site_title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:image" content="{{ meta.site_url }}/assets/img/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="AI Code Rating: an example rating, A2b, meaning an expert maintainer, 26–50% of the code written by AI, every AI change reviewed.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preload" href="/assets/fonts/archivo-e5f0fd-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/ibm-plex-sans-8b1c67-latin.woff2" as="font" type="font/woff2" crossorigin>
+    {#- Optional and gitignored: analytics and other local-only head tags -#}
+    {% include "local/head.njk" ignore missing %}
+    <style>
+{% include "css/fonts.css" %}
+{% include "css/site.css" %}
+    </style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+    {% include "partials/header.njk" %}
+
+    <main id="main" tabindex="-1">
+    {{ content | safe }}
+    </main>
+
+    {% include "partials/footer.njk" %}
+</div>
+<script src="/assets/js/header.js"></script>
+{% for script in scripts %}
+<script src="{{ script }}"></script>
+{% endfor %}
+</body>
+</html>

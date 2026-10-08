@@ -1,0 +1,21 @@
+{
+  "name": "ai-code-rating",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Website for AI Code Rating (ACR), a three-character disclosure of how AI was used in a code project.",
+  "type": "module",
+  "scripts": {
+    "build": "rm -Rf _website && npx @11ty/eleventy",
+    "serve": "rm -Rf _website && npx @11ty/eleventy --serve",
+    "debug": "rm -Rf _website && DEBUG=* npx @11ty/eleventy"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ai-code-rating/aicoderating.com.git"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "js-yaml": "^4.3.2"
+  }
+}
