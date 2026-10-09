@@ -44,7 +44,7 @@ If they only ever accepted single-line completions, AI Share would be `0`.
 
 A company web app. Developers of mixed experience use AI suggestions in places, and every pull request needs approval from one of two senior engineers before it can merge.
 
-- **Maintainer Expertise: `B`.** Look at each combination of approvals that could get a change merged, take the most experienced approver in each, and rate the least experienced of those. Every change needs one senior engineer's approval, so that's the less experienced of the two seniors, not the least experienced developer.
+- **Maintainer Expertise: `B`.** Rate the least experienced person who can approve a change without someone more experienced also approving it. Every change needs one senior engineer's approval, so that's the less experienced of the two seniors, not the least experienced developer.
 - **AI Share: `1`.** AI wrote parts of the code, well under a quarter.
 - **Oversight: `b`.** Every AI change is read in review before merge.
 

@@ -74,7 +74,7 @@ Pick the band your estimate falls in and say in the file how you estimated.
 
 ### Our Maintainers Have Different Levels of Experience. Which Do We Use?
 
-Position 1 rates the person responsible for the code, which on a team means whoever approves changes. Look at each combination of approvals that could get a change merged under your review rules, take the most experienced approver in each, and use the level of the least experienced of those, because their judgement can be the last check on what ships. Go by the rules people actually follow: count anyone who can merge, even if they rarely do, and don't count a required approval that people skip in practice.
+Position 1 rates the person responsible for the code, which on a team means whoever approves changes. Use the level of the least experienced person who can approve a change without someone more experienced also approving it, because their judgement can be the last check on what ships. Go by the rules people actually follow: count anyone who can merge, even if they rarely do, and don't count a required approval that people skip in practice.
 
 - If one approval is enough, that's the least experienced person who can approve a change on their own.
 - If no change can merge without sign-off from one of your senior maintainers, it's your least experienced senior maintainer.
