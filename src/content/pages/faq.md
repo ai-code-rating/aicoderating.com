@@ -2,7 +2,7 @@
 page_title: FAQ
 page_description: Answers to common questions about AI Code Rating and the ACR.md file.
 permalink: /faq/
-date_updated: 2026-10-08
+date_updated: 2026-10-09
 ---
 Answers to the questions people ask most about AI Code Rating. The [spec]({{ meta.url_spec }}) is the final word wherever the two differ.
 
@@ -24,13 +24,13 @@ A few things it isn't:
 
 - **It's not a rating of every contributor.** It describes the person responsible for the code. In a solo project, that's you. On a team, it's whoever approves changes before they're merged, because they decide what ships. If your approvers have different levels of experience, see below for which one to rate.
 - **It's not a judgement of anyone's worth.** It's about experience with this project's language and domain. An expert in one field can honestly be a `C` in another.
-- **It's not a ranking of projects.** An `E` project can be useful, popular and well loved. The rating tells people what they're getting, so they can decide how to use it.
+- **It's not a ranking of projects.** An `E` project can be useful, popular, and well loved. The rating tells people what they're getting, so they can decide how to use it.
 
 The level is self-assessed against two practical questions: could the person you're rating have written the code without AI, and can they explain every line?
 
 ### How Is This Different From Other AI Disclosure Standards?
 
-Most of them describe AI involvement with a single level. AI Code Rating keeps three things apart: who checks the code, how much of it was written by AI, and how carefully it was checked. The [Related Work]({{ meta.url_related }}) page compares it with AI-DECLARATION.md, Quillx and others.
+Most of them describe AI involvement with a single level. AI Code Rating keeps three things apart: who checks the code, how much of it was written by AI, and how carefully it was checked. The [Related Work]({{ meta.url_related }}) page compares it with AI-DECLARATION.md, Quillx, and others.
 
 ### Why Should I Publish a Rating?
 
@@ -40,13 +40,13 @@ A high AI Share can look like a reason to stay quiet, but readers who can't tell
 
 ### Can't People Just Give Themselves a Good Rating?
 
-Yes. Ratings are self-reported, and nothing stops a project from inflating one. But an inflated rating is easy to contradict: a project's commit history, pull requests and issue tracker show how it really works, and a rating that doesn't match them costs the project trust. An honest `D4c` tells readers more than a doubtful `B4b`. How the community could dispute a rating is an open question in the spec.
+Yes. Ratings are self-reported, and nothing stops a project from inflating one. But an inflated rating is easy to contradict: a project's commit history, pull requests, and issue tracker show how it really works, and a rating that doesn't match them costs the project trust. An honest `D4c` tells readers more than a doubtful `B4b`. How the community could dispute a rating is an open question in the spec.
 
 ## Choosing Your Rating
 
 The [rating examples]({{ meta.url_examples }}) show common setups and the rating each one gets, with the reasoning for every position.
 
-### Does Using AI for Planning, Research or Code Review Count?
+### Does Using AI for Planning, Research, or Code Review Count?
 
 Not toward AI Share. AI Share counts only code that AI wrote and that is in the project today. A project where AI helped plan or review the work, but wrote none of the code, is `0` with Oversight `a`. Mention that kind of use in the text of your `{{ meta.file_name }}`. Whether the rating itself should show it is an open question in the spec.
 
@@ -58,9 +58,9 @@ Everything a computer reads or runs: source code, tests, styles, scripts, build 
 
 Single-word or single-line completions don't count. Multi-line suggestions you accepted do, even if you edited them afterwards.
 
-### What About Dependencies, Vendored Code and Generated Files?
+### What About Dependencies, Vendored Code, and Generated Files?
 
-Leave out code your project doesn't maintain, such as dependencies and vendored libraries. Also leave out files produced by non-AI tools, such as lockfiles, compiled output and code from code generators. Files that AI generated do count.
+Leave out code your project doesn't maintain, such as dependencies and vendored libraries. Also leave out files produced by non-AI tools, such as lockfiles, compiled output, and code from code generators. Files that AI generated do count.
 
 ### How Do I Estimate AI Share?
 
@@ -130,7 +130,7 @@ In the root of the repository, named exactly `{{ meta.file_name }}`.
 
 ### Why Are Ratings Only Letters and Digits?
 
-So a rating works anywhere without escaping: in URLs, badge services, file names, commit messages and search.
+So a rating works anywhere without escaping: in URLs, badge services, file names, commit messages, and search.
 
 ### How Can I Check My File?
 
@@ -150,7 +150,7 @@ Greg was building software for decades before AI coding tools came along, and ha
 
 ### How Can I Suggest a Change or Give Feedback?
 
-[Open an issue on GitHub]({{ meta.url_issue_new }}). There's a short form for spec suggestions, site problems, corrections to the [Related Work]({{ meta.url_related }}) page and [adding your project]({{ meta.url_issue_rated }}) to Rated Projects, and a blank issue for questions and anything else. The [contributing guide]({{ meta.url_contributing }}) explains what makes a suggestion easy to act on, and how to send a pull request. Everyone taking part is expected to follow the [code of conduct]({{ meta.url_conduct }}).
+[Open an issue on GitHub]({{ meta.url_issue_new }}). There's a short form for spec suggestions, site problems, corrections to the [Related Work]({{ meta.url_related }}) page, and [adding your project]({{ meta.url_issue_rated }}) to Rated Projects, and a blank issue for questions and anything else. The [contributing guide]({{ meta.url_contributing }}) explains what makes a suggestion easy to act on, and how to send a pull request. Everyone taking part is expected to follow the [code of conduct]({{ meta.url_conduct }}).
 
 ### Does the Rating Say Anything About Copyright or Licensing?
 
@@ -158,4 +158,4 @@ No. Whether AI-written code can be copyrighted, and how it fits a project's lice
 
 ### Can I Use the Spec in My Own Work?
 
-Yes. The spec is licensed under [CC BY 4.0]({{ meta.url_licence_spec }}): you can copy, adapt and build on it, including commercially, as long as you credit AI Code Rating and link to the spec. The website's code is under the [MIT licence]({{ meta.url_licence_code }}).
+Yes. The spec is licensed under [CC BY 4.0]({{ meta.url_licence_spec }}): you can copy, adapt, and build on it, including commercially, as long as you credit AI Code Rating and link to the spec. The website's code is under the [MIT licence]({{ meta.url_licence_code }}).

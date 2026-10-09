@@ -1,7 +1,7 @@
 ---
 rating: B4c
 spec: "0.1"
-updated: 2026-10-07
+updated: 2026-10-09
 ---
 
 # AI Code Rating
@@ -12,6 +12,6 @@ This project is rated with [AI Code Rating](https://aicoderating.com/spec/0.1/),
 
 ## How AI Was Used
 
-This site is built with Claude Code, which writes nearly all of the code and drafts most of the text. Greg Chetcuti came up with AI Code Rating, makes the decisions about the levels, wording and design, and directs every change, reading some of the AI's work and checking the rest by using the site.
+This site is built with Claude Code, which writes nearly all of the code and drafts most of the text. Greg Chetcuti came up with AI Code Rating, makes the decisions about the levels, wording, and design, and directs every change, reading some of the AI's work and checking the rest by using the site.
 
 Codex also reviews the code for bugs. Commits are marked with `Co-Authored-By: Claude Code` and, where Codex reviewed them, `Reviewed-By: Codex`.

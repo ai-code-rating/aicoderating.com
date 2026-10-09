@@ -12,7 +12,7 @@ Example: `A2b` means an expert maintainer, 26–50% of the code written by AI, e
 
 ## Pages
 
-- `/` — the levels, rating form and rated projects
+- `/` — the levels, rating form, and rated projects
 - `/spec/` — the latest spec; every version also lives at `/spec/<version>/`, listed at `/spec/changelog/`
 - `/faq/` — common questions
 - `/examples/` — rating examples: common setups and the rating each one gets
@@ -39,4 +39,4 @@ npm run build   # outputs to _website/
 
 The built site in `_website/` isn't committed.
 
-The levels live in `src/_data/levels.json`; the home page, spec page and calculator are all generated from it.
+The levels live in `src/_data/levels.json`; the home page, spec page, and calculator are all generated from it.

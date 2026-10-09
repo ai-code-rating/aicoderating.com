@@ -10,7 +10,7 @@ Everyone taking part is expected to follow the [code of conduct](CODE_OF_CONDUCT
 
 - **Spec changes.** Something in the rating doesn't fit how real projects work, a level is unclear, or a situation isn't covered.
 - **Unclear wording** anywhere on the site.
-- **Site problems,** such as a broken page, the rating form or the validator.
+- **Site problems,** such as a broken page, the rating form, or the validator.
 - **Problems with the GitHub Action** go to [its own issues](https://github.com/ai-code-rating/action/issues). If the Action and the validator disagree about a file, report it here, since they share the same checks.
 - **Corrections to the Related Work page,** if we've described another standard inaccurately or missed one.
 - **Adding your project** to [Rated Projects](https://aicoderating.com/#rated) on the home page, once its `ACR.md` passes the [validator](https://aicoderating.com/validate/).
@@ -34,7 +34,7 @@ npm install
 npm run serve   # http://localhost:8080
 ```
 
-- **The levels** (names, descriptions, examples) live in `src/_data/levels.json`. The home page, spec, rating form and validator are all generated from it, so change them there.
+- **The levels** (names, descriptions, examples) live in `src/_data/levels.json`. The home page, spec, rating form, and validator are all generated from it, so change them there.
 - **Spec text** is in `src/content/spec/`. Released versions are never edited except for typos; changes go into the next version.
 - **Don't commit `_website/`.** It's the build output and is ignored by git.
 - **Check the validator** after changes that affect ratings: run `npm run build`, then `node scripts/test-validator.cjs`.

@@ -84,7 +84,7 @@ scripts:
     <div style="display:grid;gap:10px;">
         <span class="label">Rate Your Project</span>
         <h2>Get Your Rating</h2>
-        <p class="prose muted">Answer for the project as it stands today. The form starts with an example. Change any answer and the rating, badge and file update. No sign-up: the form runs in your browser.</p>
+        <p class="prose muted">Answer for the project as it stands today. The form starts with an example. Change any answer and the rating, badge, and file update. No sign-up: the form runs in your browser.</p>
     </div>
     <div class="calc">
         <form id="rate-form" autocomplete="off">
@@ -142,7 +142,7 @@ scripts:
         <div style="display:grid;gap:16px;">
             <span class="label">The File</span>
             <h2>{{ meta.file_name }}</h2>
-            <p class="prose">Put the file in the repo root. The front matter at the top is for tools like badge services, linters and code hosts to read. Below it, a short paragraph in plain English gives people a little context on how AI is used in the project.</p>
+            <p class="prose">Put the file in the repo root. The front matter at the top is for tools like badge services, linters, and code hosts to read. Below it, a short paragraph in plain English gives people a little context on how AI is used in the project.</p>
             <p class="prose muted">The name is deliberately different from <code>AGENTS.md</code> and <code>CLAUDE.md</code>. Those files give instructions <em>to</em> AI tools. This one tells people <em>how</em> AI was used. The <a href="{{ meta.url_spec }}">full spec</a> has the details, the <a href="{{ meta.url_validator }}">validator</a> checks your file, and the <a href="{{ meta.url_action }}">GitHub Action</a> checks it on every push.</p>
         </div>
         <div class="table-scroll">
@@ -180,8 +180,8 @@ scripts:
         <p class="prose muted">GitHub started recognizing files like <code>SECURITY.md</code> and <code>FUNDING.yml</code> after many projects already used them. This plan follows the same path.</p>
     </div>
     <div class="road">
-        <div class="step"><span class="label">1. Spec and Site</span><p>Publish the spec, the rating form and the file format. Collect feedback on the draft.</p></div>
-        <div class="step"><span class="label">2. Tooling</span><p>A <a href="{{ meta.url_action }}">GitHub Action</a> that checks <code>{{ meta.file_name }}</code> on every push, and badges for Markdown, HTML and reStructuredText READMEs.</p></div>
+        <div class="step"><span class="label">1. Spec and Site</span><p>Publish the spec, the rating form, and the file format. Collect feedback on the draft.</p></div>
+        <div class="step"><span class="label">2. Tooling</span><p>A <a href="{{ meta.url_action }}">GitHub Action</a> that checks <code>{{ meta.file_name }}</code> on every push, and badges for Markdown, HTML, and reStructuredText READMEs.</p></div>
         <div class="step now"><span class="label">3. Adoption</span><p>Get well-known projects to publish ratings, and list them here.</p></div>
         <div class="step"><span class="label">4. Platform Support</span><p>Propose that GitHub and other code hosts show the rating on the repo page.</p></div>
     </div>

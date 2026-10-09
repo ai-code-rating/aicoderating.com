@@ -1,5 +1,5 @@
 name: Site problem
-description: Something on aicoderating.com is broken, wrong or unclear, such as a page, the rating form or the validator.
+description: Something on aicoderating.com is broken, wrong, or unclear, such as a page, the rating form, or the validator.
 title: "Site: "
 labels: ["bug"]
 body:

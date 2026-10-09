@@ -18,7 +18,7 @@
         "url": "https://github.com/gregdotca/email-health-check",
         "acr_url": "https://github.com/gregdotca/email-health-check/blob/main/ACR.md",
         "rating": "B4c",
-        "desc": "A self-hosted checker that emails back a report on a domain's PTR, SPF, DKIM and DMARC setup."
+        "desc": "A self-hosted checker that emails back a report on a domain's PTR, SPF, DKIM, and DMARC setup."
     },
     {
         "name": "HomelabAPI",

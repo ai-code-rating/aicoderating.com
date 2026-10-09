@@ -1,20 +1,20 @@
 ---
 page_title: Related Work
-page_description: How AI Code Rating compares with other AI disclosure standards, AI contribution policies and AI instruction files.
+page_description: How AI Code Rating compares with other AI disclosure standards, AI contribution policies, and AI instruction files.
 permalink: /related-work/
-date_updated: 2026-10-07
+date_updated: 2026-10-09
 ---
 AI Code Rating isn't the first attempt to standardize how projects disclose AI use, and it shouldn't pretend to be. This page lists the other efforts we know of, what each one does well, and where AI Code Rating takes a different approach. If we've described a project unfairly or missed one, please [send a correction on GitHub]({{ meta.url_issue_related }}).
 
 ## What Makes AI Code Rating Different
 
-Most disclosure standards describe AI involvement with a single level, such as "none", "assisted" or "generated". A single level has to fold several questions into one answer. AI Code Rating keeps three of them apart:
+Most disclosure standards describe AI involvement with a single level, such as "none", "assisted", or "generated". A single level has to fold several questions into one answer. AI Code Rating keeps three of them apart:
 
 - **Who checks the code.** Maintainer Expertise rates the people who approve and merge changes. As far as we know, no other standard records this, yet it shapes how far readers can trust everything else. The same AI-written code means something different when an expert reviews it than when nobody on the project can read it.
 - **How much AI wrote.** AI Share is only a quantity. It says nothing about quality on its own.
 - **How carefully it was checked.** Oversight records review and testing separately, so a project where AI wrote most of the code can still show that every change was read.
 
-All three fit in a short code, such as `A2b`, that works in a badge, a README or a search.
+All three fit in a short code, such as `A2b`, that works in a badge, a README, or a search.
 
 ## Other Disclosure Standards
 
@@ -24,11 +24,11 @@ All three fit in a short code, such as `A2b`, that works in a badge, a README or
 | [Quillx](https://github.com/qainsights/quillx) | Spec documents | Five tiers named after kinds of writing, from Verse (human-written) to Lorem Ipsum (shipped without review). |
 | [AI Disclosure](https://github.com/ggfevans/ai-disclosure) | `AI_DISCLOSURE.md` | One of four levels, plus tags on individual source files. |
 | [AI Attestation](https://github.com/korext/ai-attestation) | `.ai-attestation.yaml` | The AI tools used and the share of commits they were involved in, detected from git history. |
-| [AI Contribution Level](https://github.com/Essk/ai-contribution-level) | Badge | A single level for how AI was used: None, Research Only, Autocomplete, Interactive or One Shot. |
+| [AI Contribution Level](https://github.com/Essk/ai-contribution-level) | Badge | A single level for how AI was used: None, Research Only, Autocomplete, Interactive, or One Shot. |
 
 ### AI-DECLARATION.md
 
-The most complete of the alternatives. Its six levels describe how closely a person and AI worked together, from AI giving occasional hints to AI working on its own, and a project can declare a level for each phase of development, such as design, testing or deployment. It has badges, tooling and documentation in several languages. Where AI-DECLARATION.md goes deeper on how AI took part in each phase, AI Code Rating separates the amount of AI code from how it was checked, and adds who checked it.
+The most complete of the alternatives. Its six levels describe how closely a person and AI worked together, from AI giving occasional hints to AI working on its own, and a project can declare a level for each phase of development, such as design, testing, or deployment. It has badges, tooling, and documentation in several languages. Where AI-DECLARATION.md goes deeper on how AI took part in each phase, AI Code Rating separates the amount of AI code from how it was checked, and adds who checked it.
 
 ### Quillx
 

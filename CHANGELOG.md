@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-09: List Punctuation and a Scope Question
+
+- Punctuation in lists: a comma before the final "and" or "or" ("read, debug, and change"). Wording only, with no change in meaning, ratings, or checks.
+  - `levels.json`: Maintainer `C`, AI Share `1`, and Oversight `a` (both `desc` and `short`), and the unused `A3a` example. This updates the home page tables, the Spec 0.1 tables, the rating form, and the generated `/assets/js/levels.js`.
+  - Spec 0.1 (still a draft, edited in place), FAQ (including two headings), Examples, and Related Work, each with `date_updated` 2026-10-09. The home page, `ACR.md` (`updated` 2026-10-09), `ratings.json`, the 0.1 summary in `spec_versions.json`, `README.md`, `CONTRIBUTING.md`, the site problem issue form, and a comment in `acr-check.js`.
+  - The Action's `lib/` is re-synced; its tests and `scripts/test-validator.cjs` give the same results as before.
+- Spec 0.1's open question about rating parts of a repository separately now names a `scope` field in the front matter as one way to do it. Whether to add it is still undecided.
+
 ## 2026-10-08: Maintainer Expertise Starts From the Solo Case
 
 Readers took position 1 to mean the developer's experience, since most projects with an `ACR.md` are solo projects where the developer and the maintainer are the same person. The explanations now start with the person responsible for the code ("in a solo project, that's you") and then give the team rule. The name stays the same, and so does the meaning in every case the old rules clearly covered (the last bullet below settles the cases they left open): position 1 still rates the author in a solo project and an approver on a team, because that's the last person who could spot a problem. Which approver is set by a single test, described in the last bullet.

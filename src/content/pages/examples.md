@@ -2,7 +2,7 @@
 page_title: Rating Examples
 page_description: Common ways projects use AI, and the AI Code Rating each one gets, with the reasoning for every position.
 permalink: /examples/
-date_updated: 2026-10-08
+date_updated: 2026-10-09
 ---
 Find the setup closest to yours. Each example walks through the three positions and the rule that decides each one. The people and projects are made up, and the [spec]({{ meta.url_spec }}) is the final word wherever an example and the spec differ.
 
@@ -18,10 +18,10 @@ A solo developer with years of professional experience in their language writes 
 
 ## AI for Planning and Review Only
 
-The same developer asks an AI to suggest designs, explain errors and review pull requests, but writes all of the code themselves.
+The same developer asks an AI to suggest designs, explain errors, and review pull requests, but writes all of the code themselves.
 
 - **Maintainer Expertise: `B`.** Unchanged.
-- **AI Share: `0`.** Only code that AI wrote counts. Planning, research and review don't.
+- **AI Share: `0`.** Only code that AI wrote counts. Planning, research, and review don't.
 - **Oversight: `a`.** No AI code, so `a`.
 
 <p class="worked-rating">{% acr "B0a" %}</p>
@@ -58,7 +58,7 @@ An expert uses an AI agent to write most of a new service. They read every diff 
 
 - **Maintainer Expertise: `A`.**
 - **AI Share: `4`.** AI wrote more than three quarters of the code.
-- **Oversight: `a`.** Every AI change is read, understood and covered by tests.
+- **Oversight: `a`.** Every AI change is read, understood, and covered by tests.
 
 <p class="worked-rating">{% acr "A4a" %}</p>
 
@@ -90,7 +90,7 @@ A project runs an AI code reviewer on every pull request. People read some chang
 
 A capable hobbyist has AI write most features. They read the tricky parts closely and check the rest by running the program.
 
-- **Maintainer Expertise: `C`.** They can read, debug and change all of the code, but would need help writing some parts from scratch.
+- **Maintainer Expertise: `C`.** They can read, debug, and change all of the code, but would need help writing some parts from scratch.
 - **AI Share: `3`.**
 - **Oversight: `c`.** Some AI changes are read; the rest are checked by running the program.
 
@@ -144,7 +144,7 @@ The paragraph in `{{ meta.file_name }}` should say what the maintainers don't kn
 
 A library's code is written by hand, but AI drafted most of its documentation site, which a maintainer reviews.
 
-- **The code:** `B`, `0` and `a`. Prose documentation isn't code, so it doesn't count toward AI Share.
+- **The code:** `B`, `0`, and `a`. Prose documentation isn't code, so it doesn't count toward AI Share.
 - **The docs:** left out of the rating. The file's text says AI drafted them and a maintainer reviews them.
 
 <p class="worked-rating">{% acr "B0a" %}</p>
