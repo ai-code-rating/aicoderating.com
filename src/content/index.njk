@@ -37,7 +37,7 @@ scripts:
     <div class="positions">
         <article class="pos">
             <div class="pos-head c1"><span class="pos-num">1</span><h3>Maintainer Expertise</h3></div>
-            <p class="q">Rate the least experienced person who can approve a change on their own, not every contributor. If every change needs more than one approval, rate the most experienced approval each change is guaranteed to get. Ask: could they have written this without AI, and can they explain every line?</p>
+            <p class="q">Rate the person responsible for the code. In a solo project, that's you. On a team, it's the least experienced person who can approve a change on their own, not every contributor. If every change needs more than one approval, rate the most experienced approval each change is guaranteed to get. Ask: could they have written this without AI, and can they explain every line?</p>
             <ul class="levels">
                 {% for d in levels.maintainer %}
                 <li><span class="k c1">{{ d.k }}</span><span><b>{{ d.name }}</b> {{ d.desc }}</span></li>
@@ -88,8 +88,9 @@ scripts:
     </div>
     <div class="calc">
         <form id="rate-form" autocomplete="off">
-            <fieldset class="q-block" data-pos="1">
-                <legend><span class="pos-num">1</span><span class="c1">Who approves and merges the code?</span></legend>
+            <fieldset class="q-block" data-pos="1" aria-describedby="hint-1">
+                <legend><span class="pos-num">1</span><span class="c1">How experienced is the person responsible for the code?</span></legend>
+                <p class="q-hint muted" id="hint-1">In a solo project, that's you. On a team, it's the least experienced person who can approve a change on their own. If every change needs more than one approval, it's the most experienced approval each change is guaranteed to get.</p>
                 <div class="opts" id="opts-1"></div>
             </fieldset>
             <fieldset class="q-block" data-pos="2">
@@ -165,7 +166,7 @@ scripts:
     <ul class="rules two">
         <li><h3>Rate Accurately, Even When the Result Looks Worse</h3><p>A rating is only useful if readers trust it. An honest <code>D4c</code> tells people more than an inflated <code>B4b</code>.</p></li>
         <li><h3>AI Share Is Not a Score</h3><p>An <code>A3a</code> project can be stronger than a <code>C1e</code> one. The other two positions tell readers how much to trust the code.</p></li>
-        <li><h3>Rate the People Who Merge</h3><p>Contributors come and go. The people who approve merges are responsible for what ships, so position 1 describes them.</p></li>
+        <li><h3>Rate the People Responsible for the Code</h3><p>Contributors come and go. Whoever approves changes before they're merged is responsible for what ships, so position 1 describes them. In a solo project, that's you.</p></li>
         <li><h3>Keep It Current</h3><p>Projects change. Check the rating when the way you work changes, and update the <code>updated</code> date when you do.</p></li>
         <li><h3>Rate the Whole Project</h3><p>One rating covers the whole repository. If a part was built differently, such as one package in a monorepo, say so in the text of the file.</p></li>
         <li><h3>Explain in Your Own Words</h3><p>Use the text of the file to add what three characters can't, such as which parts AI wrote and how you test.</p></li>

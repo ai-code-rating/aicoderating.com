@@ -2,7 +2,7 @@
 page_title: FAQ
 page_description: Answers to common questions about AI Code Rating and the ACR.md file.
 permalink: /faq/
-date_updated: 2026-10-07
+date_updated: 2026-10-08
 ---
 Answers to the questions people ask most about AI Code Rating. The [spec]({{ meta.url_spec }}) is the final word wherever the two differ.
 
@@ -10,7 +10,7 @@ Answers to the questions people ask most about AI Code Rating. The [spec]({{ met
 
 ### What Is AI Code Rating?
 
-A three-character rating, such as `A2b`, that a project publishes in an `{{ meta.file_name }}` file at the root of its repository. It tells readers who maintains the project (Maintainer Expertise), how much of the code AI wrote (AI Share), and how carefully a person checked that AI-written code (Oversight).
+A three-character rating, such as `A2b`, that a project publishes in an `{{ meta.file_name }}` file at the root of its repository. It tells readers how experienced the person responsible for the code is (Maintainer Expertise), how much of the code AI wrote (AI Share), and how carefully a person checked that AI-written code (Oversight).
 
 ### Does a Higher AI Share Mean a Worse Project?
 
@@ -22,11 +22,11 @@ Because the same AI-written code means different things in different hands. When
 
 A few things it isn't:
 
-- **It's not a rating of every contributor.** It describes the people who approve and merge code, because they decide what ships.
+- **It's not a rating of every contributor.** It describes the person responsible for the code. In a solo project, that's you. On a team, it's whoever approves changes before they're merged, because they decide what ships. If your approvers have different levels of experience, see below for which one to rate.
 - **It's not a judgement of anyone's worth.** It's about experience with this project's language and domain. An expert in one field can honestly be a `C` in another.
 - **It's not a ranking of projects.** An `E` project can be useful, popular and well loved. The rating tells people what they're getting, so they can decide how to use it.
 
-The level is self-assessed against two practical questions: could the people who merge code have written it without AI, and can they explain every line?
+The level is self-assessed against two practical questions: could the person you're rating have written the code without AI, and can they explain every line?
 
 ### How Is This Different From Other AI Disclosure Standards?
 
@@ -74,7 +74,7 @@ Pick the band your estimate falls in and say in the file how you estimated.
 
 ### Our Maintainers Have Different Levels of Experience. Which Do We Use?
 
-Use the level of the least experienced person who can approve a change for merging on their own, because that person's judgement can be the last check on what ships. If every change needs more than one approval, use the most experienced approval each change is guaranteed to get. For example, if every change needs sign-off from a senior maintainer, rate that maintainer.
+Position 1 rates the person responsible for the code, which on a team means whoever approves changes. Use the level of the least experienced person who can approve a change for merging on their own, because that person's judgement can be the last check on what ships. If every change needs more than one approval, use the most experienced approval each change is guaranteed to get. For example, if every change needs sign-off from a senior maintainer, rate that maintainer.
 
 ### What If AI Tools Merge Changes Without a Person Approving Them?
 

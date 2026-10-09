@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-08: Maintainer Expertise Starts From the Solo Case
+
+Readers took position 1 to mean the developer's experience, since most projects with an `ACR.md` are solo projects where the developer and the maintainer are the same person. The explanations now start with the person responsible for the code ("in a solo project, that's you") and then give the team rule. The meaning, the name and every rating stay the same: position 1 still rates an approver (the least experienced person who can approve a change on their own, or the most experienced approval each change is guaranteed to get when it needs more than one), because that's the last person who could spot a problem.
+
+- Home page: position 1's text in Reading a Rating starts with the solo case. The rating form's first question is now "How experienced is the person responsible for the code?", with a hint covering solo projects and both team rules (new `.q-hint` style), linked to the question with `aria-describedby` so screen readers announce it. The rule "Rate the People Who Merge" is now "Rate the People Responsible for the Code".
+- Spec 0.1 (still a draft, edited in place, `date_updated` 2026-10-08): Position 1 opens with the person responsible for the code and the solo case, then the approver rule. The rule itself doesn't change.
+- FAQ (`date_updated` 2026-10-08): "What Is AI Code Rating?", the "not a rating of every contributor" point and the self-assessment questions in "Why Rate the Maintainers at All?", and "Our Maintainers Have Different Levels of Experience" use the same framing. The team summary points to the rule for approvers with different levels, so it can't be read as "rate every approver".
+
 ## 2026-10-07: FAQ, Related Work and Spec Updates
 
 - FAQ "Who Runs AI Code Rating?" now says Greg was building software for decades before AI coding tools, mentions DomainMOD (maintained by hand since 2010), and says up front that this site is rated `B4c`, with Claude Code writing nearly all of its code and drafting most of its text. The rating is read from `ACR.md`, so it stays in step.

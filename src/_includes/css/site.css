@@ -152,6 +152,7 @@ section { margin-top: clamp(80px, 10vw, 120px); display: grid; gap: 32px; }
 .q-block + .q-block { margin-top: 28px; }
 .q-block legend { font-family: var(--font-display); font-weight: 700; font-size: var(--step-1); padding: 0; margin-bottom: 4px; display: flex; gap: 10px; align-items: center; }
 .q-block legend .pos-num { font-weight: 400; }
+.q-hint { margin: 0; font-size: 0.88rem; line-height: 1.45; }
 .usage-label { font-family: var(--font-display); font-weight: 700; font-size: var(--step-1); }
 .q-usage textarea { width: 100%; min-height: 8rem; resize: vertical; font: inherit; font-size: 0.95rem; line-height: 1.5; padding: 10px 12px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
 .q-usage textarea:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-color: var(--link); }
