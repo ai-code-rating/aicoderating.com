@@ -37,7 +37,7 @@ scripts:
     <div class="positions">
         <article class="pos">
             <div class="pos-head c1"><span class="pos-num">1</span><h3>Maintainer Expertise</h3></div>
-            <p class="q">Rate the person responsible for the code. In a solo project, that's you. On a team, it's the least experienced person who can approve a change on their own, not every contributor. If every change needs more than one approval, rate the most experienced approval each change is guaranteed to get. Ask: could they have written this without AI, and can they explain every line?</p>
+            <p class="q">Rate the person responsible for the code. In a solo project, that's you. On a team, it's the least experienced person who can approve a change on their own, not every contributor. If every change needs more than one approval, rate the most experienced approver each change is guaranteed to get. Ask: could they have written this without AI, and can they explain every line?</p>
             <ul class="levels">
                 {% for d in levels.maintainer %}
                 <li><span class="k c1">{{ d.k }}</span><span><b>{{ d.name }}</b> {{ d.desc }}</span></li>
@@ -90,7 +90,7 @@ scripts:
         <form id="rate-form" autocomplete="off">
             <fieldset class="q-block" data-pos="1" aria-describedby="hint-1">
                 <legend><span class="pos-num">1</span><span class="c1">How experienced is the person responsible for the code?</span></legend>
-                <p class="q-hint muted" id="hint-1">In a solo project, that's you. On a team, it's the least experienced person who can approve a change on their own. If every change needs more than one approval, it's the most experienced approval each change is guaranteed to get.</p>
+                <p class="q-hint muted" id="hint-1">In a solo project, that's you. On a team, it's the least experienced person who can approve a change on their own. If every change needs more than one approval, it's the most experienced approver each change is guaranteed to get.</p>
                 <div class="opts" id="opts-1"></div>
             </fieldset>
             <fieldset class="q-block" data-pos="2">

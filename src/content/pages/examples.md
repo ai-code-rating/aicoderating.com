@@ -2,7 +2,7 @@
 page_title: Rating Examples
 page_description: Common ways projects use AI, and the AI Code Rating each one gets, with the reasoning for every position.
 permalink: /examples/
-date_updated: 2026-10-07
+date_updated: 2026-10-08
 ---
 Find the setup closest to yours. Each example walks through the three positions and the rule that decides each one. The people and projects are made up, and the [spec]({{ meta.url_spec }}) is the final word wherever an example and the spec differ.
 
@@ -44,7 +44,7 @@ If they only ever accepted single-line completions, AI Share would be `0`.
 
 A company web app. Developers of mixed experience use AI suggestions in places, and every pull request needs approval from one of two senior engineers before it can merge.
 
-- **Maintainer Expertise: `B`.** Use the most experienced approval each change is guaranteed to get. Every change needs a senior engineer's approval, so the rating describes them, not the least experienced developer.
+- **Maintainer Expertise: `B`.** Use the most experienced approver each change is guaranteed to get. Every change needs a senior engineer's approval, so the rating describes them, not the least experienced developer.
 - **AI Share: `1`.** AI wrote parts of the code, well under a quarter.
 - **Oversight: `b`.** Every AI change is read in review before merge.
 

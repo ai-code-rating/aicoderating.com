@@ -74,7 +74,7 @@ Pick the band your estimate falls in and say in the file how you estimated.
 
 ### Our Maintainers Have Different Levels of Experience. Which Do We Use?
 
-Position 1 rates the person responsible for the code, which on a team means whoever approves changes. Use the level of the least experienced person who can approve a change for merging on their own, because that person's judgement can be the last check on what ships. If every change needs more than one approval, use the most experienced approval each change is guaranteed to get. For example, if every change needs sign-off from a senior maintainer, rate that maintainer.
+Position 1 rates the person responsible for the code, which on a team means whoever approves changes. Use the level of the least experienced person who can approve a change for merging on their own, because that person's judgement can be the last check on what ships. If every change needs more than one approval, use the most experienced approver each change is guaranteed to get. For example, if every change needs sign-off from a senior maintainer, rate that maintainer.
 
 ### What If AI Tools Merge Changes Without a Person Approving Them?
 
