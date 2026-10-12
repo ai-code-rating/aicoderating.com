@@ -2,7 +2,7 @@
 page_title: FAQ
 page_description: Answers to common questions about AI Code Rating and the ACR.md file.
 permalink: /faq/
-date_updated: 2026-10-09
+date_updated: 2026-10-12
 ---
 Answers to the questions people ask most about AI Code Rating. The [spec]({{ meta.url_spec }}) is the final word wherever the two differ.
 
@@ -40,7 +40,7 @@ A high AI Share can look like a reason to stay quiet, but readers who can't tell
 
 ### Can't People Just Give Themselves a Good Rating?
 
-Yes. Ratings are self-reported, and nothing stops a project from inflating one. But an inflated rating is easy to contradict: a project's commit history, pull requests, and issue tracker show how it really works, and a rating that doesn't match them costs the project trust. An honest `D4c` tells readers more than a doubtful `B4b`. How the community could dispute a rating is an open question in the spec.
+Yes. Ratings are self-reported, and nothing stops a project from inflating one. But an inflated rating is easy to contradict: a project's commit history, pull requests, and issue tracker show how it really works, and a rating that doesn't match them costs the project trust. An honest `D4c` tells readers more than a doubtful `A4b`. How the community could dispute a rating is an open question in the spec.
 
 ## Choosing Your Rating
 

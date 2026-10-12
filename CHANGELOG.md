@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-12: This Site Is Now Rated B4b
+
+- This site's own rating changes from `B4c` to `B4b`: Oversight goes from Spot-Checked to Reviewed, since every change the AI makes is read before it's committed. `ACR.md` has the new rating, `updated` 2026-10-12, and a "How AI Was Used" section that says so (it also no longer says who came up with AI Code Rating). The footer badge, the home page's Rated Projects card, and the FAQ's "Who Runs AI Code Rating?" answer read the rating from `ACR.md`, so they follow it.
+- `CLAUDE.md` says the site is rated `B4b` in its Commits section and its note on this project's own rating.
+- The home page ("Rate Accurately, Even When the Result Looks Worse") and the FAQ (`date_updated` 2026-10-12) used `B4b` as their example of an inflated rating, next to an honest `D4c`. Now that `B4b` is this site's own rating, the example is `A4b`.
+
 ## 2026-10-09: List Punctuation and a Scope Question
 
 - Punctuation in lists: a comma before the final "and" or "or" ("read, debug, and change"). Wording only, with no change in meaning, ratings, or checks.
