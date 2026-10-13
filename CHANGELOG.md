@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-12: Dependabot for npm
+
+- Added `.github/dependabot.yml` so Dependabot checks the npm packages in `package.json` (Eleventy and js-yaml) once a month. Minor and patch updates come together in one pull request, and each major update comes as its own, since a major can break the build (Eleventy 3.0.0 renders `_data/*.js` empty on Node 26). New releases wait 7 days before they're proposed. Security fixes come as their own pull requests and don't wait. Each update is built and checked locally before it's committed, not merged on GitHub.
+- `CLAUDE.md` says a js-yaml update also needs a re-sync to the GitHub Action and a release there, since the Action ships its own copy of js-yaml that Dependabot can't see.
+
 ## 2026-10-12: This Site Is Now Rated B4b
 
 - This site's own rating changes from `B4c` to `B4b`: Oversight goes from Spot-Checked to Reviewed, since every change the AI makes is read before it's committed. `ACR.md` has the new rating, `updated` 2026-10-12, and a "How AI Was Used" section that says so (it also no longer says who came up with AI Code Rating). The footer badge, the home page's Rated Projects card, and the FAQ's "Who Runs AI Code Rating?" answer read the rating from `ACR.md`, so they follow it.
