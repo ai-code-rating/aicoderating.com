@@ -30,3 +30,6 @@ ErrorDocument 404 /404.html
 <Files "llms.txt">
     ForceType "text/plain; charset=utf-8"
 </Files>
+
+# Source maps (only devtools load them) are JSON, which Apache doesn't know by default
+AddType application/json .map

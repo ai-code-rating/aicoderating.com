@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-12: Source Maps Served as JSON
+
+- `.htaccess` (`src/content/htaccess.njk`) serves `.map` files as `application/json`. Apache didn't know the extension, so js-yaml's source map (`/assets/js/vendor/js-yaml.umd.min.js.map`) was served as `text/javascript`. Devtools loaded it anyway, so nothing was broken; this just labels it correctly.
+- `CLAUDE.md` says `.htaccess` serves `.map` source maps as `application/json`.
+
 ## 2026-10-12: js-yaml 5
 
 - js-yaml goes from 4.3.2 to 5.4.3 (`package.json`, `package-lock.json`), from Dependabot's pull request, built and tested locally instead of merged on GitHub. Version 5 moved its files and dropped its default export, so three paths changed with it:
