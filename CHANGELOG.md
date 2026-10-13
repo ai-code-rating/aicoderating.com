@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-13: Stylesheet Moved Out of the Page
+
+- The site's CSS is now a file, `/assets/css/site.css`, instead of a `<style>` block inlined into every page, so the Content Security Policy's `style-src` no longer needs `'unsafe-inline'`. A security scan flagged `'unsafe-inline'` as a low-risk finding: it lets injected inline styles run, which can be used to restyle or hide parts of a page. Scripts were already locked down.
+  - New `src/content/css.njk` joins `fonts.css` and `site.css` into the file, and `base.njk` links to it in place of the `<style>` block.
+  - A new `cssVersion` shortcode (`eleventy.config.cjs`) hashes the two CSS files, and the link adds the hash (`site.css?v=...`), so browsers fetch the new file as soon as the CSS changes. It's a shortcode rather than a `_data` file because Eleventy keeps data between rebuilds under `npm run serve`, so a data file's hash stayed the same after a CSS edit.
+  - `.htaccess` (`src/content/htaccess.njk`) caches `.css` for a year, like the fonts, since the URL changes whenever the file does.
+- The home page's six `style="display:grid;gap:..."` attributes (`src/content/index.njk`) are now the classes `.stack` and `.stack-lg` in `site.css`, since a strict CSP blocks style attributes too. The spacing is unchanged.
+- `src/assets/img/favicon.svg` keeps its `<style>` block for its dark-mode colours. Browsers don't apply the page's CSP to an SVG loaded as an image (checked in Firefox and a Chromium browser), so the favicon is unaffected. Opened directly, though, the SVG is treated as a page, the CSP blocks the `<style>`, and the bars turned black, so each bar now also has a `fill` attribute with its light-mode colour.
+- Checked by building the site and loading every page in a headless browser under a CSP with no `'unsafe-inline'`: no style was blocked and the pages look the same.
+- `CLAUDE.md` describes the stylesheet file and its version hash, the one-year cache for `.css`, and the rule to never inline CSS (no `<style>` blocks or `style` attributes).
+
 ## 2026-10-12: Source Maps Served as JSON
 
 - `.htaccess` (`src/content/htaccess.njk`) serves `.map` files as `application/json`. Apache didn't know the extension, so js-yaml's source map (`/assets/js/vendor/js-yaml.umd.min.js.map`) was served as `text/javascript`. Devtools loaded it anyway, so nothing was broken; this just labels it correctly.

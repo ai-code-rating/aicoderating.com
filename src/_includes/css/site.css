@@ -108,6 +108,9 @@ main:focus { outline: none; }
 
 /* Space between sections is margin, not padding, so jumping to #levels/#rate/#file lands on the heading. */
 section { margin-top: clamp(80px, 10vw, 120px); display: grid; gap: 32px; }
+/* A section's label, heading and intro, stacked. A class, not a style attribute, so the CSP needs no 'unsafe-inline'. */
+.stack { display: grid; gap: 10px; }
+.stack-lg { gap: 16px; }
 
 /* Hero */
 .hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; align-items: center; padding-block: clamp(56px, 7vw, 80px) 0; }

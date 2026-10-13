@@ -29,7 +29,7 @@ scripts:
 </div>
 
 <section id="levels">
-    <div style="display:grid;gap:10px;">
+    <div class="stack">
         <span class="label">The Levels</span>
         <h2>Reading a Rating</h2>
         <p class="prose muted">Each position uses a different kind of symbol, so a rating can't be misread: an uppercase letter, then a digit, then a lowercase letter. Most other AI disclosure standards use a single level; keeping these three questions apart is what makes AI Code Rating different. <a href="{{ meta.url_related }}">See how it compares</a>.</p>
@@ -66,7 +66,7 @@ scripts:
 </section>
 
 <section id="rated">
-    <div style="display:grid;gap:10px;">
+    <div class="stack">
         <span class="label">Adopters</span>
         <h2>Rated Projects</h2>
         <p class="prose muted">Real projects that publish a rating in <code>{{ meta.file_name }}</code>. For common setups across the whole range and the reasoning behind each rating, see the <a href="{{ meta.url_examples }}">rating examples</a>.</p>
@@ -81,7 +81,7 @@ scripts:
 </section>
 
 <section id="rate">
-    <div style="display:grid;gap:10px;">
+    <div class="stack">
         <span class="label">Rate Your Project</span>
         <h2>Get Your Rating</h2>
         <p class="prose muted">Answer for the project as it stands today. The form starts with an example. Change any answer and the rating, badge, and file update. No sign-up: the form runs in your browser.</p>
@@ -139,7 +139,7 @@ scripts:
 
 <section id="file">
     <div class="two">
-        <div style="display:grid;gap:16px;">
+        <div class="stack stack-lg">
             <span class="label">The File</span>
             <h2>{{ meta.file_name }}</h2>
             <p class="prose">Put the file in the repo root. The front matter at the top is for tools like badge services, linters, and code hosts to read. Below it, a short paragraph in plain English gives people a little context on how AI is used in the project.</p>
@@ -159,7 +159,7 @@ scripts:
 </section>
 
 <section id="rules">
-    <div style="display:grid;gap:10px;">
+    <div class="stack">
         <span class="label">Rules</span>
         <h2>Using the Rating</h2>
     </div>
@@ -174,7 +174,7 @@ scripts:
 </section>
 
 <section id="roadmap">
-    <div style="display:grid;gap:10px;">
+    <div class="stack">
         <span class="label">Roadmap</span>
         <h2>From a File to a Standard</h2>
         <p class="prose muted">GitHub started recognizing files like <code>SECURITY.md</code> and <code>FUNDING.yml</code> after many projects already used them. This plan follows the same path.</p>
