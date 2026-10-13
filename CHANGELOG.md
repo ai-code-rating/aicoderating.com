@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-12: llms.txt for AI Agents
+
+- New `/llms.txt` (`src/content/llms.njk`, following llmstxt.org), a plain-text summary for AI agents that are asked to add an `ACR.md` file. It tells them to ask the person for Maintainer Expertise and Oversight instead of deciding them, to suggest an AI Share only from evidence the person confirms, that AI review never raises Oversight, and to check the file with the validator or the GitHub Action. It also gives the three positions (with the team rule for position 1, a pointer to the spec for setups such as two required approvals, and the rule that Oversight can be no better than `d` if AI tools can merge without a person approving), the combinations to question, the file format with an example (labelled as one, so agents replace its rating, names, date, and text), the badge, and links to the spec, rating form, validator, examples, FAQ, and Action. The levels and settings come from `levels.json` and `meta.js`, so it stays in step with the site.
+- `.htaccess` serves `llms.txt` as UTF-8 text, like `ACR.md`, so its "·" and "–" show correctly, and sends `Cache-Control: no-cache` for `.txt` files (`llms.txt` and `robots.txt`), like pages, so agents don't keep old guidance.
+- `CLAUDE.md` lists `llms.njk` with the pages, and notes that `.htaccess` serves `/llms.txt` as UTF-8 text and sends `no-cache` for `.txt` files.
+
 ## 2026-10-12: Dependabot for npm
 
 - Added `.github/dependabot.yml` so Dependabot checks the npm packages in `package.json` (Eleventy and js-yaml) once a month. Minor and patch updates come together in one pull request, and each major update comes as its own, since a major can break the build (Eleventy 3.0.0 renders `_data/*.js` empty on Node 26). New releases wait 7 days before they're proposed. Security fixes come as their own pull requests and don't wait. Each update is built and checked locally before it's committed, not merged on GitHub.
