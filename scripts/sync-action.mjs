@@ -31,7 +31,7 @@ const banner = "// Copied from the aicoderating.com repo by scripts/sync-action.
 
 fs.writeFileSync(path.join(lib, "acr-data.json"), JSON.stringify(data, null, 2) + "\n");
 fs.writeFileSync(path.join(lib, "acr-check.cjs"), banner + fs.readFileSync(path.join(root, "src/assets/js/acr-check.js"), "utf8"));
-fs.copyFileSync(path.join(root, "node_modules/js-yaml/dist/js-yaml.js"), path.join(lib, "js-yaml.cjs"));
+fs.copyFileSync(path.join(root, "node_modules/js-yaml/dist/js-yaml.cjs.js"), path.join(lib, "js-yaml.cjs"));
 fs.copyFileSync(path.join(root, "node_modules/js-yaml/LICENSE"), path.join(lib, "js-yaml.LICENSE"));
 const yamlVersion = read("node_modules/js-yaml/package.json").version;
 console.log(`Synced spec ${data.spec} (versions ${data.specVersions.join(", ")}), acr-check.js and js-yaml ${yamlVersion} to ${lib}`);

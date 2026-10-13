@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-12: js-yaml 5
+
+- js-yaml goes from 4.3.2 to 5.4.3 (`package.json`, `package-lock.json`), from Dependabot's pull request, built and tested locally instead of merged on GitHub. Version 5 moved its files and dropped its default export, so three paths changed with it:
+  - `eleventy.config.cjs` copies the browser build from `dist/browser/js-yaml.umd.min.js` (the old `dist/js-yaml.min.js` is gone). It's still published as `/assets/js/vendor/js-yaml.min.js` and still sets `window.jsyaml`, so the validator page doesn't change.
+  - `eleventy.config.cjs` also publishes the browser build's source map as `/assets/js/vendor/js-yaml.umd.min.js.map`, the name the script's `sourceMappingURL` comment asks for. Without it, opening devtools on the validator page gave a 404 for the map. Browsers only load it when devtools are open, so visitors don't download it.
+  - `src/_data/own_rating.js` imports js-yaml with `import * as yaml`, since there's no default export any more. Without this, the build fails.
+  - `scripts/sync-action.mjs` copies the CommonJS build from `dist/js-yaml.cjs.js` (the old `dist/js-yaml.js` is gone) into the GitHub Action.
+- `scripts/test-validator.cjs` gives the same results as on 4.3.2, apart from one message: unclosed YAML brackets are now reported on the line with the bracket instead of the line after it. `CORE_SCHEMA` still keeps `updated` as written, so the date checks are unchanged. A side-by-side test of 15 unusual front matters (duplicate keys, `yes`, octal and float numbers, aliases, merge keys, `~`, `.nan`, tabs, a BOM, several documents, and very long values) gave the same results on both versions except one: a complex key such as `? [a]`, which 4.3.2 quietly turned into the string `a`, is now reported as invalid YAML. The Action's tests also pass after syncing js-yaml 5.4.3 into a copy of the Action. The Action itself still has 4.3.2 until it's re-synced with `scripts/sync-action.mjs` and released.
+- `CLAUDE.md` says js-yaml's browser build now comes from `dist/browser/js-yaml.umd.min.js`, and that ESM code imports js-yaml 5 with `import * as yaml`, since it has no default export.
+
 ## 2026-10-12: llms.txt for AI Agents
 
 - New `/llms.txt` (`src/content/llms.njk`, following llmstxt.org), a plain-text summary for AI agents that are asked to add an `ACR.md` file. It tells them to ask the person for Maintainer Expertise and Oversight instead of deciding them, to suggest an AI Share only from evidence the person confirms, that AI review never raises Oversight, and to check the file with the validator or the GitHub Action. It also gives the three positions (with the team rule for position 1, a pointer to the spec for setups such as two required approvals, and the rule that Oversight can be no better than `d` if AI tools can merge without a person approving), the combinations to question, the file format with an example (labelled as one, so agents replace its rating, names, date, and text), the badge, and links to the spec, rating form, validator, examples, FAQ, and Action. The levels and settings come from `levels.json` and `meta.js`, so it stays in step with the site.

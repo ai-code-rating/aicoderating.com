@@ -6,7 +6,9 @@ module.exports = function(eleventyConfig) {
     // This project's own rating file, published at /ACR.md (the footer badge links to it)
     eleventyConfig.addPassthroughCopy({ "ACR.md": "ACR.md" });
     // YAML parser for the validator page, served from our own domain
-    eleventyConfig.addPassthroughCopy({ "node_modules/js-yaml/dist/js-yaml.min.js": "assets/js/vendor/js-yaml.min.js" });
+    eleventyConfig.addPassthroughCopy({ "node_modules/js-yaml/dist/browser/js-yaml.umd.min.js": "assets/js/vendor/js-yaml.min.js" });
+    // Its source map, under the name the script's sourceMappingURL comment asks for (only devtools load it)
+    eleventyConfig.addPassthroughCopy({ "node_modules/js-yaml/dist/browser/js-yaml.umd.min.js.map": "assets/js/vendor/js-yaml.umd.min.js.map" });
 
     // {% acr "A2b" %} -> the rating with each character in its position colour
     eleventyConfig.addShortcode("acr", (code) =>
