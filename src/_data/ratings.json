@@ -22,8 +22,8 @@
     },
     {
         "name": "HomelabAPI",
-        "url": "https://github.com/homelabapi/homelabapi",
-        "acr_url": "https://github.com/homelabapi/homelabapi/blob/main/ACR.md",
+        "url": "https://github.com/gregdotca/homelabapi",
+        "acr_url": "https://github.com/gregdotca/homelabapi/blob/main/ACR.md",
         "rating": "B0a",
         "desc": "A self-hosted API that gathers a homelab's notifications and other outputs in one place."
     }

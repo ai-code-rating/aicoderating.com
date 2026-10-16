@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-15: HomelabAPI Repo Link Updated
+
+- HomelabAPI's repository moved from `homelabapi/homelabapi` to `gregdotca/homelabapi` on GitHub. Its Rated Projects card (`src/_data/ratings.json`) now links its name to https://github.com/gregdotca/homelabapi and its rating to that repo's `ACR.md`. The old URLs still redirect, and the rating is unchanged (`B0a`).
+
 ## 2026-10-13: Stylesheet Moved Out of the Page
 
 - The site's CSS is now a file, `/assets/css/site.css`, instead of a `<style>` block inlined into every page, so the Content Security Policy's `style-src` no longer needs `'unsafe-inline'`. A security scan flagged `'unsafe-inline'` as a low-risk finding: it lets injected inline styles run, which can be used to restyle or hide parts of a page. Scripts were already locked down.
