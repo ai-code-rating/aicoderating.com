@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-10-17: Live Site Link and Licence Contact
+
+- `README.md` links to the live site, https://aicoderating.com, just under the title. It described the site and spec but never linked to it.
+- The copyright lines in `LICENSE` and `LICENSE-SPEC` now include a contact address: `Copyright (c) 2026 Greg Chetcuti <greg@chetcuti.com>`.
+
 ## 2026-10-15: HomelabAPI Repo Link Updated
 
 - HomelabAPI's repository moved from `homelabapi/homelabapi` to `gregdotca/homelabapi` on GitHub. Its Rated Projects card (`src/_data/ratings.json`) now links its name to https://github.com/gregdotca/homelabapi and its rating to that repo's `ACR.md`. The old URLs still redirect, and the rating is unchanged (`B0a`).

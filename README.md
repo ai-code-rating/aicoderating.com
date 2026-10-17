@@ -1,5 +1,7 @@
 # AI Code Rating
 
+Live Site: https://aicoderating.com
+
 Website and draft spec for AI Code Rating (ACR): a three-character rating, published in an `ACR.md` file at the root of a repo, that tells readers who maintains a project, how much of its code is written by AI, and how closely a human checks the AI's work.
 
 | Position | Measures | Values |
