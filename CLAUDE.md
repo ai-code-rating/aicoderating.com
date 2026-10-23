@@ -8,7 +8,7 @@ Website for **AI Code Rating (ACR)**, a three-character disclosure of how AI was
 
 ## Hosting
 
-Static site. `_website/` is gitignored. Deploys are done from a local machine: build, then copy `_website/` to the web server. Server and deploy details are kept privately, outside this repo. Anything the site loads from another host (images, scripts, analytics) must also be allowed by the server's Content-Security-Policy, or browsers will block it.
+Static site. `_website/` is gitignored. Deploys are done from a local machine: build, then publish `_website/` to the web server, which serves it from a checkout it can rebuild on its own. Server and deploy details are kept privately, outside this repo. Anything the site loads from another host (images, scripts, analytics) must also be allowed by the server's Content-Security-Policy, or browsers will block it.
 
 ## Extra Head Tags (Analytics)
 
