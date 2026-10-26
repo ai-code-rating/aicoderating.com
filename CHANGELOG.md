@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-25: Rating Steps in the Home Page Intro
+
+- The home page's intro (`src/content/index.njk`) now sets out the whole process just under the headline, with "form" linked to `#rate`: "To rate a project, generate your `ACR.md` file using the form below and save it in the root of your repo." The README badge isn't mentioned as a step, since the spec makes it optional. It replaces a sentence that covered only the file: "Put the rating in an `ACR.md` file at the root of your repo." Until now, a visitor only found out what came after the form's questions once they reached its output, far down the page. The sentence after it now reads "Readers decide what a rating means, and it doesn't judge whether using AI is good or bad." It said "what it means for them", but "it" would have pointed at the repo, and "for them" was dropped to keep the intro short.
+- The rating form's intro drops its last sentence: "No sign-up: the form runs in your browser."
+- The page's `date_updated` is now 2026-10-25, so the sitemap shows the change.
+
 ## 2026-10-17: Live Site Link and Licence Contact
 
 - `README.md` links to the live site, https://aicoderating.com, just under the title. It described the site and spec but never linked to it.

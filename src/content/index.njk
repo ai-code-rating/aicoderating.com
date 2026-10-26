@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 permalink: /
 is_home_page: true
-date_updated: 2026-10-07
+date_updated: 2026-10-25
 sitemap:
   changefreq: monthly
 scripts:
@@ -13,7 +13,7 @@ scripts:
     <div>
         <h1>Who Wrote the Code?</h1>
         <p class="lede">Three simple characters that tell a reader who maintains a project, how much of its code is written by AI, and how closely a human checks the AI's work.</p>
-        <p class="sub">Put the rating in an <code>{{ meta.file_name }}</code> file at the root of your repo. Readers decide what it means for them, and the rating doesn't judge whether using AI is good or bad.</p>
+        <p class="sub">To rate a project, generate your <code>{{ meta.file_name }}</code> file using the <a href="#rate">form</a> below and save it in the root of your repo. Readers decide what a rating means, and it doesn't judge whether using AI is good or bad.</p>
     </div>
     <div class="plate" aria-label="Example rating A2b">
         <div class="plate-head">
@@ -84,7 +84,7 @@ scripts:
     <div class="stack">
         <span class="label">Rate Your Project</span>
         <h2>Get Your Rating</h2>
-        <p class="prose muted">Answer for the project as it stands today. The form starts with an example. Change any answer and the rating, badge, and file update. No sign-up: the form runs in your browser.</p>
+        <p class="prose muted">Answer for the project as it stands today. The form starts with an example. Change any answer and the rating, badge, and file update.</p>
     </div>
     <div class="calc">
         <form id="rate-form" autocomplete="off">
