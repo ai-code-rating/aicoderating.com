@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-02: markdown-it Security Update
+
+- `package-lock.json` moves markdown-it, which Eleventy uses to render Markdown, from 14.3.2 to 14.3.3. This fixes two advisories: GHSA-gfr2-rv44-r23c (high) and GHSA-vfgh-jcmw-g37q (low). The update stays within the version range Eleventy 3.1.6 allows, so `package.json` is unchanged. The site still builds, and the validator test script gives the expected results. One moderate advisory is left: minimatch (GHSA-g3hv-75wg-m249), which comes in through Eleventy itself and needs an Eleventy release to fix.
+
 ## 2026-10-25: Rating Steps in the Home Page Intro
 
 - The home page's intro (`src/content/index.njk`) now sets out the whole process just under the headline, with "form" linked to `#rate`: "To rate a project, generate your `ACR.md` file using the form below and save it in the root of your repo." The README badge isn't mentioned as a step, since the spec makes it optional. It replaces a sentence that covered only the file: "Put the rating in an `ACR.md` file at the root of your repo." Until now, a visitor only found out what came after the form's questions once they reached its output, far down the page. The sentence after it now reads "Readers decide what a rating means, and it doesn't judge whether using AI is good or bad." It said "what it means for them", but "it" would have pointed at the repo, and "for them" was dropped to keep the intro short.
