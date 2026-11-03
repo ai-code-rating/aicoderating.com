@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-02: Eleventy 3.1.7, js-yaml 5.5.0, and the minimatch Fix
+
+- `package.json` and `package-lock.json` move Eleventy from 3.1.6 to 3.1.7 and js-yaml from 5.4.3 to 5.5.0. These are the two updates in Dependabot's monthly pull request. Eleventy 3.1.7 drops several packages it no longer needs, so the lockfile shrinks.
+- `package-lock.json` also moves `@11ty/recursive-copy`, which Eleventy uses to copy files into the built site, from 4.0.4 to 4.0.6. Version 4.0.6 no longer depends on the minimatch package. It carries its own copy of minimatch 3.1.5's matching code instead, to keep the same matching behaviour. So the minimatch package, and the advisory npm and Dependabot reported against it (GHSA-g3hv-75wg-m249, moderate), are gone from the lockfile, and `npm audit` now finds no vulnerabilities. That copied code only matches the site's own file patterns at build time, never anything a visitor sends. 4.0.6 is within the range Eleventy 3.1.7 allows.
+- The built pages are the same as before, apart from the generator tag, which names the new Eleventy version. The validator test script gives the same results as before, and every file under `src/assets/` is copied into the site unchanged.
+- js-yaml 5.5.0 is stricter in one case: an unquoted front matter key or value that starts with `,`, `]`, or `}` (such as `rating: ]B4b`) used to load as text and is now a YAML error on the validator page.
+- The GitHub Action's bundled js-yaml was re-synced to 5.5.0 with `scripts/sync-action.mjs`. The Action's tests pass.
+
 ## 2026-11-02: markdown-it Security Update
 
 - `package-lock.json` moves markdown-it, which Eleventy uses to render Markdown, from 14.3.2 to 14.3.3. This fixes two advisories: GHSA-gfr2-rv44-r23c (high) and GHSA-vfgh-jcmw-g37q (low). The update stays within the version range Eleventy 3.1.6 allows, so `package.json` is unchanged. The site still builds, and the validator test script gives the expected results. One moderate advisory is left: minimatch (GHSA-g3hv-75wg-m249), which comes in through Eleventy itself and needs an Eleventy release to fix.

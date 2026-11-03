@@ -15,7 +15,7 @@
     "url": "git+https://github.com/ai-code-rating/aicoderating.com.git"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.1.6",
-    "js-yaml": "^5.4.3"
+    "@11ty/eleventy": "^3.1.7",
+    "js-yaml": "^5.5.0"
   }
 }
