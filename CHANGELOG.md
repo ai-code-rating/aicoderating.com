@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-06: DomainMOD Rating Update
+
+- DomainMOD's Rated Projects card now shows its new rating, `B1b`. Its description and the FAQ no longer say it's written entirely by hand.
+
 ## 2026-11-02: Eleventy 3.1.7, js-yaml 5.5.0, and the minimatch Fix
 
 - `package.json` and `package-lock.json` move Eleventy from 3.1.6 to 3.1.7 and js-yaml from 5.4.3 to 5.5.0. These are the two updates in Dependabot's monthly pull request. Eleventy 3.1.7 drops several packages it no longer needs, so the lockfile shrinks.

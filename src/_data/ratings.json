@@ -10,8 +10,8 @@
         "name": "DomainMOD",
         "url": "https://github.com/domainmod/domainmod",
         "acr_url": "https://github.com/domainmod/domainmod/blob/master/ACR.md",
-        "rating": "B0a",
-        "desc": "An app for managing domains and SSL certificates, maintained by hand since 2010."
+        "rating": "B1b",
+        "desc": "An app for managing domains and SSL certificates, written almost entirely by hand since 2010."
     },
     {
         "name": "Email Health Check",

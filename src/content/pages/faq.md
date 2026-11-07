@@ -2,7 +2,7 @@
 page_title: FAQ
 page_description: Answers to common questions about AI Code Rating and the ACR.md file.
 permalink: /faq/
-date_updated: 2026-10-12
+date_updated: 2026-11-06
 ---
 Answers to the questions people ask most about AI Code Rating. The [spec]({{ meta.url_spec }}) is the final word wherever the two differ.
 
@@ -146,7 +146,7 @@ Nothing, until you change it. Your file names the spec version it follows, and e
 
 It was started by Greg Chetcuti as a proposal. The AI Code Rating spec is still a draft, and its development happens in the open on [GitHub]({{ meta.url_repo }}).
 
-Greg was building software for decades before AI coding tools came along, and has maintained [DomainMOD](https://github.com/domainmod/domainmod), an open source app, by hand since 2010. This site was built differently. It's rated `{{ own_rating.rating }}`: Claude Code writes nearly all of its code and drafts most of its text, directed by Greg. Its [`{{ meta.file_name }}`](/{{ meta.file_name }}) says how.
+Greg was building software for decades before AI coding tools came along, and has written and maintained [DomainMOD](https://github.com/domainmod/domainmod), an open source app, almost entirely by hand since 2010. This site was built differently. It's rated `{{ own_rating.rating }}`: Claude Code writes nearly all of its code and drafts most of its text, directed by Greg. Its [`{{ meta.file_name }}`](/{{ meta.file_name }}) says how.
 
 ### How Can I Suggest a Change or Give Feedback?
 
