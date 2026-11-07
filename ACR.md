@@ -1,7 +1,7 @@
 ---
 rating: B4b
 spec: "0.1"
-updated: 2026-10-12
+updated: 2026-11-07
 ---
 
 # AI Code Rating
@@ -14,4 +14,4 @@ This project is rated with [AI Code Rating](https://aicoderating.com/spec/0.1/),
 
 This site is built with Claude Code, which writes nearly all of the code and drafts most of the text. Greg Chetcuti makes the decisions about the levels, wording, and design, and directs every change. He reads every change the AI makes before it's committed, and also uses the site to check that it works.
 
-Codex also reviews the code for bugs. Commits are marked with `Co-Authored-By: Claude Code` and, where Codex reviewed them, `Reviewed-By: Codex`.
+Codex also reviews the code for bugs. Commits are marked with `Co-Authored-By: Claude Code` when Claude Code changed code, `Reviewed-By: Claude Code` when it reviewed a change without writing code in it (such as hand-written code or its own documentation edits), and `Reviewed-By: Codex` where Codex reviewed them.

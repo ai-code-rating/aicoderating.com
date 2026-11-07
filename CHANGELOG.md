@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-07: Review Trailer
+
+- `ACR.md` now mentions the `Reviewed-By: Claude Code` commit trailer, used when Claude Code reviewed a change without writing code in it, including its own documentation edits. The rating is unchanged.
+
 ## 2026-11-06: DomainMOD Rating Update
 
 - DomainMOD's Rated Projects card now shows its new rating, `B1b`. Its description and the FAQ no longer say it's written entirely by hand.

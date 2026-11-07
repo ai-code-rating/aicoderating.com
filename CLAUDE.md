@@ -31,7 +31,13 @@ The GitHub organization profile (`ai-code-rating/.github`, file `profile/README.
 
 ## Commits
 
-Every commit in this repo carries a `Co-Authored-By: Claude Code <noreply@anthropic.com>` trailer, since Claude Code writes most of the code (the site is rated `B4b`). Keep the email: GitHub only shows a co-author written as `Name <email>`. Commits Codex actually reviewed also get `Reviewed-By: Codex`; leave it off the rest, since every trailer is a claim about that commit. A commit of only hand edits gets neither. `ACR.md` mentions both. The history was reset to a single Initial Commit with both trailers on 2026-10-07; don't rewrite history again, just use the format from then on.
+Each commit carries whichever of three trailers apply, since every trailer is a claim about that commit:
+
+- `Co-Authored-By: Claude Code <noreply@anthropic.com>`: Claude Code changed code in it (the site is rated `B4b`). Claude editing only docs doesn't count. Keep the email: GitHub only shows a co-author written as `Name <email>`.
+- `Reviewed-By: Claude Code`: only on commits without the co-author trailer where Claude reviewed the change, such as hand-written code or Claude's doc-only edits. When Claude co-authored, its review is implied.
+- `Reviewed-By: Codex`: Codex actually reviewed it.
+
+When both review lines are present, `Reviewed-By: Claude Code` comes first, then `Reviewed-By: Codex`. Never combine two names on one line. A commit neither Claude nor Codex wrote or reviewed gets none. AI review never counts toward the Oversight level. `ACR.md` mentions all three. The history was reset to a single Initial Commit with the co-author and Codex trailers on 2026-10-07; don't rewrite history again, just use the format from then on.
 
 ## Licences
 
