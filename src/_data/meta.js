@@ -27,6 +27,9 @@ export default {
     //
     url_repo: "https://github.com/ai-code-rating/aicoderating.com",
     url_action: "https://github.com/ai-code-rating/action",
+    // The maintainer's Mastodon profile. base.njk links it with rel="me", so the profile can show
+    // aicoderating.com as verified. Set it to an empty string to leave the link out.
+    url_mastodon: "https://mastodon.social/@gregdotca",
     url_issue_new: "https://github.com/ai-code-rating/aicoderating.com/issues/new/choose",
     url_issue_spec: "https://github.com/ai-code-rating/aicoderating.com/issues/new?template=spec-suggestion.yml",
     url_issue_related: "https://github.com/ai-code-rating/aicoderating.com/issues/new?template=related-work.yml",
