@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-11: monmon in Rated Projects
+
+- monmon (`B2a`) replaces Email Health Check in Rated Projects, so the list no longer repeats the site's own `B4b`.
+
 ## 2026-11-11: Rated Projects Ratings
 
 - The Rated Projects cards for HomelabAPI and Email Health Check now show the ratings in their `ACR.md` files, `B1b` and `B4b`.
