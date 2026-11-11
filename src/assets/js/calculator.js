@@ -100,7 +100,8 @@
             "updated: " + today + "\n" +
             "---\n\n" +
             "# AI Code Rating\n\n" +
-            "**ACR " + code + "** (" + summary + ")\n\n" +
+            // The rating links to its page on this site. The spec doesn't require the link.
+            "**[ACR " + code + "](" + ACR.siteUrl + "/" + code + "/)** (" + summary + ")\n\n" +
             "This project is rated with [AI Code Rating](" + ACR.siteUrl + "/spec/" + ACR.spec + "/), spec version " + ACR.spec + ".\n\n" +
             "## How AI Was Used\n\n" +
             usageText(share);
