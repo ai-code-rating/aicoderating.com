@@ -14,17 +14,17 @@
         "desc": "An app for managing domains and SSL certificates, written almost entirely by hand since 2010."
     },
     {
-        "name": "HomelabAPI",
-        "url": "https://github.com/gregdotca/homelabapi",
-        "acr_url": "https://github.com/gregdotca/homelabapi/blob/main/ACR.md",
-        "rating": "B1b",
-        "desc": "A self-hosted API that gathers a homelab's notifications and other outputs in one place."
-    },
-    {
         "name": "monmon",
         "url": "https://github.com/gregdotca/monmon",
         "acr_url": "https://github.com/gregdotca/monmon/blob/main/ACR.md",
         "rating": "B2a",
         "desc": "A Raspberry Pi tool that watches your existing monitoring systems and flashes its screen when a node needs attention."
+    },
+    {
+        "name": "HomelabAPI",
+        "url": "https://github.com/gregdotca/homelabapi",
+        "acr_url": "https://github.com/gregdotca/homelabapi/blob/main/ACR.md",
+        "rating": "B1b",
+        "desc": "A self-hosted API that gathers a homelab's notifications and other outputs in one place."
     }
 ]

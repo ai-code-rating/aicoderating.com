@@ -2,7 +2,7 @@
 
 ## 2026-11-11: monmon in Rated Projects
 
-- monmon (`B2a`) replaces Email Health Check in Rated Projects, so the list no longer repeats the site's own `B4b`.
+- monmon (`B2a`) replaces Email Health Check in Rated Projects, so the list no longer repeats the site's own `B4b`. It's listed after DomainMOD, before HomelabAPI.
 
 ## 2026-11-11: Rated Projects Ratings
 
