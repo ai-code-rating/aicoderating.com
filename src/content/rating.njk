@@ -13,7 +13,7 @@ eleventyComputed:
 {#- One page per valid rating, from _data/all_ratings.js. Left out of collections, so not in the sitemap.
     Its own <article> rather than layouts/page.njk, so the heading can be the coloured rating. -#}
 <article class="doc">
-<h1>{% acr r.code %}</h1>
+<h1>{% acr r.code, false %}</h1>
 {%- if r.warning %}
 <p class="calc-note">Check this rating: {{ r.warning }}</p>
 {%- endif %}

@@ -29,7 +29,9 @@
         var rank = { error: 0, warn: 1, ok: 2, info: 2 };
         results.sort(function (a, b) { return rank[a.level] - rank[b.level]; });
         list.innerHTML = results.map(function (r) {
-            var html = r.meaning ? "<strong>" + r.msg + '</strong><span class="v-meaning">' + r.meaning.map(esc).join("<br>") + "</span>" : r.msg;
+            // A valid rating's meaning, with a link to its page (/A2b/) for the full breakdown.
+            var more = r.rating ? '<br><a href="/' + encodeURIComponent(r.rating) + '/">What ' + esc(r.rating) + " means</a>" : "";
+            var html = r.meaning ? "<strong>" + r.msg + '</strong><span class="v-meaning">' + r.meaning.map(esc).join("<br>") + more + "</span>" : r.msg;
             return '<li class="v-item v-' + r.level + '"><span class="v-tag">' + LABELS[r.level] + "</span><span>" + html + "</span></li>";
         }).join("");
     }

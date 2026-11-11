@@ -14,9 +14,12 @@ module.exports = function(eleventyConfig) {
     // Its source map, under the name the script's sourceMappingURL comment asks for (only devtools load it)
     eleventyConfig.addPassthroughCopy({ "node_modules/js-yaml/dist/browser/js-yaml.umd.min.js.map": "assets/js/vendor/js-yaml.umd.min.js.map" });
 
-    // {% acr "A2b" %} -> the rating with each character in its position colour
-    eleventyConfig.addShortcode("acr", (code) =>
-        `<span class="acr-code" aria-label="ACR ${code}">ACR <span class="c1">${code[0]}</span><span class="c2">${code[1]}</span><span class="c3">${code[2]}</span></span>`);
+    // {% acr "A2b" %} -> the rating with each character in its position colour, linked to its page
+    // (/A2b/). {% acr "A2b", false %} leaves out the link, for the rating's own page.
+    eleventyConfig.addShortcode("acr", (code, link = true) => {
+        const html = `<span class="acr-code" aria-label="ACR ${code}">ACR <span class="c1">${code[0]}</span><span class="c2">${code[1]}</span><span class="c3">${code[2]}</span></span>`;
+        return link ? `<a class="acr-link" href="/${code}/">${html}</a>` : html;
+    });
 
     // {% cssVersion %} -> a short hash of the CSS, added to the stylesheet's URL (site.css?v=...) so
     // browsers fetch the new file as soon as the CSS changes and can cache it for a year. A shortcode,
