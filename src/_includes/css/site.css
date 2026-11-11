@@ -242,6 +242,10 @@ button.copy:hover { border-color: var(--ink); }
 .doc .worked-rating { font-size: var(--step-2); margin: 0.2em 0 0.6em; }
 .doc .worked-rating ~ h2 { margin-top: 3.4em; } /* more space between examples on /examples/ */
 
+/* Per-rating pages (/A2b/ and so on) */
+.doc .calc-note { margin: 1.4em 0; }
+.rating-level { font-weight: 800; }
+
 /* Validator */
 .validator { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: start; margin-top: 24px; }
 .v-input, .v-output { display: grid; gap: 8px; min-width: 0; }

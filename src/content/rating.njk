@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+pagination:
+    data: all_ratings
+    size: 1
+    alias: r
+permalink: "/{{ r.code }}/"
+eleventyExcludeFromCollections: true
+eleventyComputed:
+    page_title: "ACR {{ r.code }}"
+    page_description: "What the AI Code Rating {{ r.code }} means: Maintainer {{ r.maintainer.name }}, AI Share {{ r.share.label }}, Oversight {{ r.oversight_name }}."
+---
+{#- One page per valid rating, from _data/all_ratings.js. Left out of collections, so not in the sitemap.
+    Its own <article> rather than layouts/page.njk, so the heading can be the coloured rating. -#}
+<article class="doc">
+<h1>{% acr r.code %}</h1>
+{%- if r.warning %}
+<p class="calc-note">Check this rating: {{ r.warning }}</p>
+{%- endif %}
+<p>A project rated <code>{{ r.code }}</code> says this about how its code was built:</p>
+
+<h2>Maintainer Expertise: <span class="c1 rating-level">{{ r.maintainer.k }}, {{ r.maintainer.name }}</span></h2>
+<p>{{ r.maintainer.desc }}</p>
+
+<h2>AI Share: <span class="c2 rating-level">{{ r.share.k }}, {{ r.share.label }}</span></h2>
+<p>{{ r.share.desc }}</p>
+
+<h2>Oversight: <span class="c3 rating-level">{{ r.oversight.k }}, {{ r.oversight_name }}</span></h2>
+{%- if r.share.k == 0 %}
+<p>With no AI-written code, Oversight is always <code>a</code>.</p>
+{%- else %}
+<p>{{ r.oversight.desc }}</p>
+{%- endif %}
+
+<h2>About the Rating</h2>
+<p>The rating describes how AI was used, not whether the project is any good. The project's own <code>{{ meta.file_name }}</code> file has the details. The levels are defined in the <a href="{{ meta.url_spec }}">spec</a>, and you can rate your own project with the <a href="/#rate">rating form</a>.</p>
+</article>

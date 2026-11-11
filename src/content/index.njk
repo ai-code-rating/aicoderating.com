@@ -112,7 +112,8 @@ scripts:
             <div class="plate" aria-live="polite">
                 <div class="plate-head">
                     <span class="label">Your Rating</span>
-                    <span class="label mono" id="out-code-small"></span>
+                    {#- No href until calculator.js sets one, so an older cached script leaves plain text, never a link to the wrong rating -#}
+                    <a class="label mono" id="out-code-small"></a>
                 </div>
                 <div class="plate-code">
                     <div class="c1"><div class="ch" id="ch1"></div><div class="tick"></div><div class="what">Maintainer</div><div class="val" id="val1"></div></div>

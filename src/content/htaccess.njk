@@ -34,3 +34,16 @@ ErrorDocument 404 /404.html
 
 # Source maps (only devtools load them) are JSON, which Apache doesn't know by default
 AddType application/json .map
+
+# Per-rating pages are /A2b/ and so on: Maintainer in capitals, Oversight in lower case.
+# Send a wrongly cased address (/a2b/, /A2B, /a2B/) to the right one, fixing one letter per rule.
+# Only valid ratings match: with AI Share 0, Oversight must be "a", so /a0B/ is a plain 404.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+{%- for m in levels.maintainer %}
+    RewriteRule "^{{ m.k | lower }}(0[aA]|[1-4][a-eA-E])/?$" "/{{ m.k }}$1/" [R=301,L]
+{%- endfor %}
+{%- for o in levels.oversight %}
+    RewriteRule "^([A-E]{% if o.k == 'a' %}[0-4]{% else %}[1-4]{% endif %}){{ o.k | upper }}/?$" "/$1{{ o.k }}/" [R=301,L]
+{%- endfor %}
+</IfModule>

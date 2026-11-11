@@ -79,7 +79,10 @@
         var note = document.getElementById("calc-note");
         note.hidden = !clash;
         note.textContent = clash ? "Check this rating: " + clash.reason : "";
-        document.getElementById("out-code-small").textContent = code;
+        var codeLink = document.getElementById("out-code-small");
+        codeLink.textContent = code;
+        codeLink.href = "/" + code + "/"; // that rating's page, explaining each position
+        codeLink.title = "What " + code + " means";
 
         document.getElementById("badge-img").innerHTML = '<img src="' + badgeURL(code) + '" alt="ACR ' + escapeXML(code) + '" width="64" height="20">';
         document.getElementById("out-badge").textContent = BADGE_FORMATS[badgeFormat](code, badgeURL(code));
