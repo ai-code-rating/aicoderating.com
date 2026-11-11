@@ -17,14 +17,14 @@
         "name": "Email Health Check",
         "url": "https://github.com/gregdotca/email-health-check",
         "acr_url": "https://github.com/gregdotca/email-health-check/blob/main/ACR.md",
-        "rating": "B4c",
+        "rating": "B4b",
         "desc": "A self-hosted checker that emails back a report on a domain's PTR, SPF, DKIM, and DMARC setup."
     },
     {
         "name": "HomelabAPI",
         "url": "https://github.com/gregdotca/homelabapi",
         "acr_url": "https://github.com/gregdotca/homelabapi/blob/main/ACR.md",
-        "rating": "B0a",
+        "rating": "B1b",
         "desc": "A self-hosted API that gathers a homelab's notifications and other outputs in one place."
     }
 ]

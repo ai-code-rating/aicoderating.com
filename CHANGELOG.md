@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-11: Rated Projects Ratings
+
+- The Rated Projects cards for HomelabAPI and Email Health Check now show the ratings in their `ACR.md` files, `B1b` and `B4b`.
+
 ## 2026-11-07: Review Trailer
 
 - `ACR.md` now mentions the `Reviewed-By: Claude Code` commit trailer, used when Claude Code reviewed a change without writing code in it, including its own documentation edits. The rating is unchanged.
