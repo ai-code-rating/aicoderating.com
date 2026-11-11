@@ -2,7 +2,7 @@
 
 ## 2026-11-11: A Page for Every Rating
 
-- Every valid rating now has its own page explaining each position, such as [/A2b/](https://aicoderating.com/A2b/). The rating form links to the page for the rating you pick, and mis-cased addresses such as `/a2b/` redirect to the right one.
+- Every valid rating now has its own page explaining each position, such as [/A2b/](https://aicoderating.com/A2b/). The rating form links to the page for the rating you pick, and mis-cased addresses such as `/a2b/` redirect to the right one. `/ACR/` redirects to the home page.
 
 ## 2026-11-11: Rated Projects Ratings
 

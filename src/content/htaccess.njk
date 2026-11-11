@@ -46,4 +46,6 @@ AddType application/json .map
 {%- for o in levels.oversight %}
     RewriteRule "^([A-E]{% if o.k == 'a' %}[0-4]{% else %}[1-4]{% endif %}){{ o.k | upper }}/?$" "/$1{{ o.k }}/" [R=301,L]
 {%- endfor %}
+    # There's no page at /ACR/ (only /ACR.md), so send it and /acr/ to the home page
+    RewriteRule "^ACR/?$" "/" [NC,R=301,L]
 </IfModule>
